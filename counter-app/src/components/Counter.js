@@ -50,11 +50,20 @@ const startValue = () => {
   btn.addEventListener('click', () => { 
     let val = document.getElementById('inp1');
     let value = parseInt(inp.value);
-         
-        document.getElementById('num').value = val;
-        setCount(value);
-        inp.style.display = "none";
-        btn.style.display = "none";
+    document.getElementById('num').value = val;
+
+
+    if (value === "" || isNaN(value)) { 
+      document.getElementById("num").value = 0;
+      setCount(0);
+  } else {
+      setCount(value);
+  }
+
+    
+   
+    inp.style.display = "none";
+    btn.style.display = "none";
   });
   div1.appendChild(btn);
 
