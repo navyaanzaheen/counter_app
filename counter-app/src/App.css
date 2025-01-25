@@ -77,7 +77,7 @@ input{
 }
 
 
-@media screen and (width:1080px){
+@media screen and (min-width:767px){
     body{
         background-color: rgb(19, 115, 199)
     }
