@@ -42,7 +42,11 @@ const startValue = () => {
 
   let inp = document.createElement("input");
 
-  inp.id = "inp1";
+  inp.id = "inp1"  
+  inp.addEventListener("focus",(event)=>{
+
+    event.target.style.backgroundColor="pink";
+  })
   div1.appendChild(inp);
 
   let btn = document.createElement("button");
