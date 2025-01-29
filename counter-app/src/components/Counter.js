@@ -43,10 +43,21 @@ const startValue = () => {
   let inp = document.createElement("input");
 
   inp.id = "inp1"  
-  inp.addEventListener("focus",(event)=>{
+  // inp.addEventListener("focus",(event)=>{
+  //     event.target.style.backgroundColor="pink";
+  // })
+  inp.onfocus = function() {
+    document.getElementById("inp1").style.backgroundColor = "pink";
+  };
+  
+  
+  
 
-    event.target.style.backgroundColor="pink";
-  })
+
+
+    
+   
+  
   div1.appendChild(inp);
 
   let btn = document.createElement("button");
@@ -94,7 +105,7 @@ return (
 
 
 <input type="number" id="num" value={count} 
-  onChange={(e) => setCount(parseInt(e.target.value))}/>
+  onChange={(e) => setCount(parseInt(e.target.value))}   />
 
 
 <div className="buttons">
